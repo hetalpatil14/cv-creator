@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "{% static 'row2.css' %}">
+
+    <title>base</title>
+</head>
+<body > <!-- style=background:red -->
+
+    {% block header_block %}
+    <ul>
+        {% comment %} <li> <a href="{% url 'create' %}">  </a></li> {% endcomment %}
+        <!-- <li>Data</li> -->
+    </ul>
+    {% endblock %}
+
+
+    {% block body_block %}
+
+    {% endblock %}
+    
+    {% block footer_block  %}
+    <ul>
+        <!-- <li>Share</li> -->
+    </ul>
+    {% endblock %}
+    
+
+</body>
+</html>

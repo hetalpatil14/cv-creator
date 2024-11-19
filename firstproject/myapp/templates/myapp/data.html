@@ -1,0 +1,39 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+<!DOCTYPE>
+<html>
+    <head>
+        <title>data</title>
+    </head>
+    {% comment %} <body style="background:red"> {% endcomment %}
+    
+    {% block body_block %}
+    {% comment %} <table border="2" >  {% endcomment %}
+    <div class="container">
+        <h1 style="text-align: center;" ><i>Details Of Candidates</i></h1>
+        <!-- <h2>Name</h2> -->
+        {% for d in myapp %}  <br>            
+        {% comment %}  {% endcomment %}
+
+      
+             <input type="text" value="{{d.name}}"> 
+              <a  href="{% url 'register' pk=d.pk %}" ><button type="button" class="btn btn-warning" >Register</button></a>
+               <a  href="{% url 'viewdata' pk=d.pk %}" ><button type="button" class="btn btn-warning" >View</button></a>
+               <a  href="{% url 'edit' pk=d.pk %}" ><button type="button" class="btn btn-warning" >Edit</button></a>
+               <a  href="{% url 'delete' pk=d.pk %}" ><button type="button" class="btn btn-warning" >Delete</button></a>
+
+            
+    </div>
+            
+            
+    {% csrf_token %}
+                {% comment %} <!-- <th>{{d.email | lower}}</th> --> {% endcomment %}
+                {% comment %} <!-- <th>{{d.email | lower}}</th> --> {% endcomment %}
+            
+        {% endfor %}
+    {% comment %} </table> {% endcomment %}
+    {% endblock %}
+    
+    
+    </body>
+</html>

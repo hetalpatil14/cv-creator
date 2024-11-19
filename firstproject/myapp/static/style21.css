@@ -1,0 +1,71 @@
+/* register */
+
+*{
+    box-sizing: border-box;
+    background-color: rgb(248, 243, 244);
+    
+}
+
+.container{
+    padding: 16px;
+}
+h1{
+    color:rgb(223, 9, 116);
+    text-align: center;
+    word-spacing: 15px;
+}
+
+textarea {
+  width: 100%;
+  /* heigh /* padding: ; */
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background:rgb(248, 231, 234) ;
+  resize: vertical; /* Allows vertical resizing only */
+}
+textarea:hover{
+    background-color: #fa70b227;
+    border:none;
+
+}
+btnn{
+    background-color: #f5d2e3;
+}
+input[type=text],input[type=number],input[type=email]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: rgb(248, 231, 234);
+  
+}
+input[type=text]:hover, input[type=number]:hover , input[type=email]:hover {
+    /* outline: none; */
+    background-color: #f5d2e3;
+  
+}
+
+hr{
+    border: 1px solid #fa88aa;
+    margin-bottom: 25px;
+}
+button{
+    margin: 20px;
+    /* padding-right: 50%; */
+    background-color: #f5d2e3;
+    color: rgb(247, 11, 156);
+    padding: 16px 20px;
+    /* margin: 8px 0; */
+    border: none;
+    cursor: pointer;
+    /* width: 50%; */
+    opacity: 0.9;
+    margin-left: auto;
+}
+button:hover{
+    color: rgb(216, 56, 181);
+
+
+}

@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'style21.css' %}">
+    </head>
+    <body>
+        <form method = "POST" action = "{% url 'create' %}" enctype="multipart/form-data">
+            <div class="container">
+                    <h1><i>Input Your details</i></h1>
+                    <hr>
+        
+            <label for="name">Name</label>
+                <input type = "text" name = "name" placeholder="Enter your full name">
+            <label for="address">Address</label><br>
+        <textarea  name="address" placeholder="eg.street no." ></textarea> <br><br>
+                <!-- <input type = "text" name = "address" required> -->
+            <label for="number">Telephone/Mobile Number</label>
+                 <input type="number" name = "number" placeholder="10 Digit"  max="9999999999" >
+            <label for="age">Age</label>
+                <input type = "number" name = "age" placeholder="Enter your Age">
+            <label for="email">Email</label> 
+                <input type = "email" name = "email" placeholder="valid id">
+            <label for="objective">Objectives</label>
+        <textarea name="objective" id=""></textarea><br><br>
+                <!-- <input type = "text" name = "objective" > -->
+            <label for="qualification">Qualifications</label>
+        <textarea name="qualification" id="" placeholder="eg.BCA"></textarea><br><br>
+                <!-- <input type = "text"  name = "qualification" placeholder="eg.Bsc"> -->
+            <label for="skills">Skills</label>
+        <textarea name="skills" id=""></textarea><br><br>
+                <!-- <input type="text" name="skills" placeholder="eg.Computer basics"> -->
+            <label for="experience">Work Experience</label>
+        <textarea name="experience" ></textarea><br><br>
+                <!-- <input type = "text" name = "experience" > -->
+            <label for="honor">Honor</label>
+                <input type = "text" name = "honor" >
+            <label for="activies">Activies</label> 
+                <input type = "text" name = "activity" >
+            <label for="service">Services</label>
+                <input type = "text" name = "service" >
+            <label for="image">Image</label><br>
+                <input type="file" name="image" >
+            <!-- <a href="{{d.image.url}}""><button id="btnn">Add Your Profile Photo</button></a> -->
+            <!-- <input type="image" name="image"> -->
+
+            <button type = "submit" class="button">Submit</button>
+            {% csrf_token %}
+            
+        </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+    <title>Resume</title>
+</head>
+<body>
+<div class="hello">
+<div class="name" >
+    <div class="subname" style="width: 80%;float: left;">  <i><h2 style="text-decoration: underline; text-decoration-thickness: 2px;">{{person.name | upper}}</h2></i></div>
+    <div class="img" style="width: 20%; float: right;" ><img src="{{person.image.url}}" width="100px" height="100px"   ></div>
+</div>
+<div class="hi" style="clear: both;" >
+        <p> <i style="color:rgb(163, 26, 122);">Address:-</i>{{person.address}}  <i style="color:rgb(163, 26, 122) ;">Contact no:-</i> {{person.number}}- <i style="color:rgb(163, 26, 122) ;">Email:-</i>{{person.email}} <i style="color: rgb(163, 26, 122);">Age:-</i>{{person.age}} </p><hr>
+        <h4>OBJECTIVE</h4>
+        <pre>{{person.objective | upper}}</pre>
+    <h4>QUALIFICATION</h4>
+    {{person.qualification | upper}}
+    <h4>SPECIALIZED SKILLS</h4>
+    <ul>
+        <li>{{person.skills | upper}}</li>
+        <li>{{person.skills | upper}}</li>
+        <li>{{person.skills | upper}}</li>
+    </ul>
+    
+    <h4>WORK EXPERIENCE</h4>
+    {{person.experience | upper}}
+    <h4>HONORS</h4>
+    {{person.honor | upper}}
+    <h4>ACTIVITIES</h4>
+    {{person.activity| upper}}
+    <h4>COMMUNITY SERVICE</h4>
+    {{person.service | upper}}
+
+    {% csrf_token %}
+</div>       
+</div>
+</body>
+</html>

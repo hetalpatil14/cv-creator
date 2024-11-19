@@ -1,0 +1,45 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'style2.css' %}">
+    </head>
+    <body>
+      
+         <h1><i>Edit your data</i></h1>
+        <form method="post" action="{% url 'update' pk=person.pk %}">
+        <div class="container">
+            <label for="name">Name</label>
+                <input type = "text" name = "name" placeholder="Enter your full name" value="{{person.name}}" required>
+            <label for="address">Address</label>
+                <input type = "text" name = "address" value="{{person.address}}" required>
+            <label for="number">Telephone/Mobile Number</label>
+                    <input type="number" name = "number" placeholder="10 Digit" value="{{person.number}}">
+            <label for="age">Age</label>
+                <input type = "number" name = "age" placeholder="Enter your Age" value="{{person.age}}">
+            <label for="email">Email</label> 
+                <input type = "email" name = "email" placeholder="valid id" value="{{person.email}}" >
+            <label for="objective">Objectives</label>
+                <input type = "text" name = "objective" value="{{person.objective}}">
+            <label for="qualification">Qualifications</label>
+                <input type = "text"  name = "qualification" placeholder="eg.Bsc" value="{{person.qualification}}">
+            <label for="skills">Skills</label>
+                <input type="text" name="skills" placeholder="eg.Computer basics" value="{{person.skills}}">
+            <label for="experiece">Work Experience</label>
+                <input type = "text" name = "experience" value="{{person.experience}}">
+            <label for="honor">Honor</label>
+                <input type = "text" name = "honor" value="{{person.honor}}" >
+            <label for="activies">Activies</label> 
+                <input type = "text" name = "activity" value="{{person.activity}}" >
+            <label for="service">Services</label>
+                <input type = "text" name = "service" value="{{person.service}}" >
+            <label for="image">Profile Photo</label>
+                <input type="file" name="image" value="{{person.name}}">
+            <button type = "submit" class="button">Submit</button>
+            {% csrf_token %}
+        
+    </form>
+    </div>
+    </body>
+
+</html>
